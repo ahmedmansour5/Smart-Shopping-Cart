@@ -1,0 +1,115 @@
+<FlatButton@ButtonBehavior+Label>:
+    font_size: 14
+
+<listWindow>:
+    id: main_win
+    orientation: "vertical"
+    spacing: 10
+    space_x: self.size[0]/3
+    canvas.before:
+        Color:
+            rgba: (1,1,1, 1)
+        Rectangle:
+            size: self.size
+            pos: self.pos
+
+    BoxLayout:
+        id: header
+        size_hint_y: None
+        height: 60
+        canvas.before:
+            Color:
+                rgba: (.06, .45, .45, 1)
+            Rectangle:
+                size: self.size
+                pos: self.pos
+        Label:
+            text: "MY LIST"
+            bold: True
+            size_hint_x: .9
+            font_size: 20
+        FlatButton:
+            id: back
+            text: 'Back'
+            color: (1,1,1,1)
+            size_hint_x: .1
+            underline: True
+            on_release: root.go_backk()
+    BoxLayout:
+        orientation: 'horizontal'
+        size_hint_y: None
+        height: 45
+        spacing: 12
+        Label:
+            id: spp
+            text: ''
+            size_hint_x: .005
+        Spinner:
+            id: choose_item
+            text: 'Product List'
+            background_normal: ''
+            background_color: (.06, .32, .32, 1)
+            size_hint_x: .6
+        Button:
+            id: add_item
+            text: 'add to list'
+            background_normal: ''
+            background_color: (.06, .32, .32, 1)
+            size_hint_x: .2
+            on_release: root.add_list()
+        Label:
+            id: spppp
+            text: ''
+            size_hint_x: .005
+         
+    BoxLayout:
+        id: preview_l
+        orientation: 'vertical'
+        size_hint_x: 1
+        
+        TextInput:
+            id: list_preview 
+            background_normal: ''
+            background_color: (.06, .65, .65, 1)
+            #readonly: True
+            #text: 'AAST RETAILER\n\nThe Collector\n123 Main St\nKnowhere, Space\n\nTel: (555)-123-456\nReceipt No: \nDate: \n\n'
+            size_hint_y: .9
+
+    BoxLayout:
+        orientation: 'horizontal'
+        size_hint_y: None
+        height: 45
+        spacing: 12
+        Label:
+            id: aaa
+            text: ''
+            size_hint_x: .005
+        Button:
+            id: add_favv
+            text: 'add to favorite'
+            background_normal: ''
+            background_color: (.06, .32, .32, 1)
+            size_hint_x: .2   
+            on_release: root.add_fav()       
+        Button:
+            id: preview_favv
+            text: 'preview favorite'
+            background_normal: ''
+            background_color: (.06, .32, .32, 1)
+            size_hint_x: .2
+            on_release: root.preview_fav()
+        Button:
+            id: remv_list
+            text: 'remove list'
+            background_normal: ''
+            background_color: (.06, .32, .32, 1)
+            size_hint_x: .2
+            on_release: root.remove_list()
+        Label:
+            id: aaaa
+            text: ''
+            size_hint_x: .005
+
+    BoxLayout:
+        orientation: 'horizontal'
+        size_hint_y: 0.05

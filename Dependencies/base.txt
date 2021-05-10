@@ -1,0 +1,8 @@
+cython==0.29.14
+pygame==1.9.6
+kivy==1.11.1
+pymongo==3.10.0
+pandas==0.25.3
+matplotlib==3.1.2
+kivy-garden==0.1.4
+mongodb == 2.6

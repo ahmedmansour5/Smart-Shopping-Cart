@@ -1,0 +1,250 @@
+<FlatButton@ButtonBehavior+Label>:
+    font_size: 14
+
+<MapWindow>:
+    id: main_win
+    orientation: "vertical"
+    spacing: 10
+    space_x: self.size[0]/3
+    canvas.before:
+        Color:
+            rgba: (1,1,1, 1)
+        Rectangle:
+            size: self.size
+            pos: self.pos
+
+    BoxLayout:
+        id: header
+        size_hint_y: None
+        height: 60
+        canvas.before:
+            Color:
+                rgba: (.06, .45, .45, 1)
+            Rectangle:
+                size: self.size
+                pos: self.pos
+        Label:
+            text: "STORE MAP"
+            bold: True
+            size_hint_x: .9
+            font_size: 20
+        FlatButton:
+            id: loggedin_user
+            text: 'Back'
+            color: (1,1,1,1)
+            size_hint_x: .1
+            underline: True
+            on_release: root.go_back()
+
+
+    BoxLayout:
+        id: content_nav
+        
+        BoxLayout:
+            id: nav_tabs
+            size_hint_x: .2
+            size_hint_y: 1.014
+            orientation: 'vertical'
+            spacing: 8
+            canvas.before:
+                Color:
+                    rgba: (.06, .52, .52,1)
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+
+            ToggleButton:
+                id: map_toggle
+                text: 'Full Map'
+                size_hint_y: .1
+                state: 'down'
+                background_color: (.06, .47, .47, 1)
+                background_normal: ''
+                group: 'map_navs'
+                on_state: root.change_screen(self)
+            ToggleButton:
+                id: food_toggle
+                text: 'Go to Luggage'
+                size_hint_y: .1
+                background_color: (.06, .47, .47, 1)
+                background_normal: ''
+                group: 'map_navs'
+                on_state: root.change_screen(self)
+            ToggleButton:
+                id: electronics_toggle
+                text: 'Go to Automotive'
+                size_hint_y: .1
+                background_color: (.06, .47, .47, 1)
+                background_normal: ''
+                group: 'map_navs'
+                on_state: root.change_screen(self)
+            ToggleButton:
+                id: clothes_toggle
+                text: 'Go to Housewares'
+                size_hint_y: .1                
+                background_color: (.06, .47, .47, 1)
+                background_normal: ''
+                group: 'map_navs'
+                on_state: root.change_screen(self)
+            ToggleButton:
+                id: toys_toggle
+                text: 'Go to Infants'
+                size_hint_y: .1
+                background_color: (.06, .47, .47, 1)
+                background_normal: ''
+                group: 'map_navs'
+                on_state: root.change_screen(self)
+            ToggleButton:
+                id: sport_toggle
+                text: 'Go to Home storage'
+                size_hint_y: .1
+                background_color: (.06, .47, .47, 1)
+                background_normal: ''
+                group: 'map_navs'
+                on_state: root.change_screen(self)  
+            ToggleButton:
+                id: seasonal
+                text: 'Go to Seasonal'
+                size_hint_y: .1
+                background_color: (.06, .47, .47, 1)
+                background_normal: ''
+                group: 'map_navs'
+                on_state: root.change_screen(self)
+            ToggleButton:
+                id: boys_section
+                text: 'Go to Boys section'
+                size_hint_y: .1
+                background_color: (.06, .47, .47, 1)
+                background_normal: ''
+                group: 'map_navs'
+                on_state: root.change_screen(self)
+            ToggleButton:
+                id: home_floral
+                text: 'Go to Home Floral'
+                size_hint_y: .1
+                background_color: (.06, .47, .47, 1)
+                background_normal: ''
+                group: 'map_navs'
+                on_state: root.change_screen(self)
+            ToggleButton:
+                id: pet_supplies
+                text: 'Go to Pet supplies'
+                size_hint_y: .1
+                background_color: (.06, .47, .47, 1)
+                background_normal: ''
+                group: 'map_navs'
+                on_state: root.change_screen(self)   
+            ToggleButton:
+                id: music_movies
+                text: 'Go to Music and Movies section'
+                size_hint_y: .1
+                background_color: (.06, .47, .47, 1)
+                background_normal: ''
+                group: 'map_navs'
+                on_state: root.change_screen(self)
+            ToggleButton:
+                id: pet_supplies
+                text: 'Go to Intimate Apparel section'
+                size_hint_y: .1
+                background_color: (.06, .47, .47, 1)
+                background_normal: ''
+                group: 'map_navs'
+                on_state: root.change_screen(self)       
+            Label:
+                id: sp
+                text: ''
+                size_hint_y: .7
+        BoxLayout:
+            id: all_content
+            size_hint_x: .8
+            padding: (20,10)
+            ScreenManager:
+                id: scrn_mngr
+
+                Screen:
+                    id: full_map
+                    name: 'full_map'
+                    Image:
+                        id: imageView
+                        source: '999.png'
+                        allow_stretch: True
+                Screen:
+                    id: luggage_map
+                    name: 'luggage_map'
+                    Image:
+                        id: imageView
+                        source: 'luggage.jpeg'
+                        allow_stretch: True
+
+                Screen:
+                    id: automotive_map
+                    name: 'automotive_map'
+                    Image:
+                        id: imageView
+                        source: 'automotive.jpeg'
+                        allow_stretch: True
+                Screen:
+                    id: housewares_map
+                    name: 'housewares_map'
+                    Image:
+                        id: imageView
+                        source: 'House_wares.jpeg'
+                        allow_stretch: True
+                Screen:
+                    id: infants_map
+                    name: 'infants_map'
+                    Image:
+                        id: imageView
+                        source: 'infants.jpeg'
+                        allow_stretch: True
+                Screen:
+                    id: home_storage_map
+                    name: 'home_storage_map'
+                    Image:
+                        id: imageView
+                        source: 'home_storage.jpeg'
+                        allow_stretch: True       
+                Screen:
+                    id: seasonal_map
+                    name: 'seasonal_map'
+                    Image:
+                        id: imageView
+                        source: 'Seasonal.jpeg'
+                        allow_stretch: True
+                Screen:
+                    id: boys_section_map
+                    name: 'boys_section_map'
+                    Image:
+                        id: imageView
+                        source: 'Boys_section.jpeg'
+                        allow_stretch: True
+                Screen:
+                    id: home_floral_map
+                    name: 'home_floral_map'
+                    Image:
+                        id: imageView
+                        source: 'Home_floral.jpeg'
+                        allow_stretch: True
+                Screen:
+                    id: Pet_supplies_map
+                    name: 'Pet_supplies_map'
+                    Image:
+                        id: imageView
+                        source: 'Pet_supplies.jpeg'
+                        allow_stretch: True  
+                Screen:
+                    id: music_movies_map
+                    name: 'music_movies_map'
+                    Image:
+                        id: imageView
+                        source: 'Music_Movies.jpeg'
+                        allow_stretch: True  
+                Screen:
+                    id: intimate_apparel_map
+                    name: 'intimate_apparel_map'
+                    Image:
+                        id: imageView
+                        source: 'Intimate_apparel.jpeg'
+                        allow_stretch: True                 
+
+
