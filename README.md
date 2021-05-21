@@ -6,7 +6,7 @@
 
 * The hardware used is a Raspberry pi model 3B+ as the microprocessor, a 7-inch capacitive touch control screen, and RFID chips as embedded sensors. 
 
-* The backend used is a NoSQL (MongoDB) cloud-based database server. 
+* The backend used is a NoSQL (MongoDB) Cloud-Based database server. 
 
 * The OS used on top of the microprocessor is UBUNTU MATE 18.04 Linux OS. 
 
