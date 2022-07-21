@@ -17,16 +17,27 @@
 <br/>
 
    Step 1: Start
+<br/>
    Step 2: customer sign in
+<br/>   
    Step 3: Scan RFID Tag
+<br/>   
    Step 4: After scanning, fetch product details from database
+<br/>
    Step 5: Display product details on screen
+<br/>
    Step 6: Add product cost to total as products are being scanned
+<br/>
    Step 7: Customer can “REMOVE” a product from total
+<br/>
    Step 8: If product is removed display message “Are you sure you want To remove product ??”
+<br/>
    Step 9: If product is removed update list and show the reduced total on screen and if not, total will be same
+<br/>
    Step 10: if customer finished shopping, then he/she can print the receipt
+<br/>
    Step 11: Receipt is printed at the cashier’s side
+<br/>
    Step 12: Customer pays and leave.
 
 <br/>
