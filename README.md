@@ -16,18 +16,18 @@
 ### Algorithmic pseudo code
 <br/>
 
-1. Step 1: Start
-2. Step 2: customer sign in
-3. Step 3: Scan RFID Tag
-4. Step 4: After scanning, fetch product details from database
-5. Step 5: Display product details on screen
-6. Step 6: Add product cost to total as products are being scanned
-7. Step 7: Customer can “REMOVE” a product from total
-8. Step 8: If product is removed display message “Are you sure you want To remove product ??”
-9. Step 9: If product is removed update list and show the reduced total on screen and if not, total will be same
-10. Step 10: if customer finished shopping, then he/she can print the receipt
-11. Step 11: Receipt is printed at the cashier’s side
-12. Step 12: Customer pays and leave.
+   Step 1: Start
+   Step 2: customer sign in
+   Step 3: Scan RFID Tag
+   Step 4: After scanning, fetch product details from database
+   Step 5: Display product details on screen
+   Step 6: Add product cost to total as products are being scanned
+   Step 7: Customer can “REMOVE” a product from total
+   Step 8: If product is removed display message “Are you sure you want To remove product ??”
+   Step 9: If product is removed update list and show the reduced total on screen and if not, total will be same
+   Step 10: if customer finished shopping, then he/she can print the receipt
+   Step 11: Receipt is printed at the cashier’s side
+   Step 12: Customer pays and leave.
 
 <br/>
 <br/>
