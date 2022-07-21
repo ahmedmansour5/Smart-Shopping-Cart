@@ -19,9 +19,9 @@
    Step 1: Start
 <br/>
    Step 2: customer sign in
-<br/>   
+<br/>
    Step 3: Scan RFID Tag
-<br/>   
+<br/>
    Step 4: After scanning, fetch product details from database
 <br/>
    Step 5: Display product details on screen
